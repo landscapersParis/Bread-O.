@@ -1,0 +1,31 @@
+<section class="py-2">
+	<div class="row">
+		<div class="col-md-6 text-center">
+			<h1 class="display-3 mt-3">
+				The Best Bread in the World
+			</h1><p class="lead">Com and get it home in a few business overnight! </p>
+			<form action="/charge" method="POST">
+			  <script
+			    src="https://checkout.stripe.com/checkout.js" 
+			    class="stripe-button"
+			    data-key="{{stripePublishableKey}}"
+			    data-amount="1000"
+			    data-name="Bread Crums"
+			    data-description="This is Art de vivre coming home"
+			    data-image="/imgs/marketplace.png"
+			    data-locale="auto"
+			    data-currency="eur">
+			  </script>
+			  <script>
+			  	// Hide default pay button
+			  		document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+			  </script>
+			  <button type="submit" class="btn btn-dark btn-lg">Delivers you for 8$</button>
+			</form>
+		</div>
+		<div class="col-md-6">
+			<br>
+			<img src="/imgs/breadHeader.png" alt="breadcrums presentation" class="img-fluid">			
+		</div>
+	</div>
+</section>
